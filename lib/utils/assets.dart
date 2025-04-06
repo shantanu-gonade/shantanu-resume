@@ -7,9 +7,12 @@ abstract class StaticAssets {
   /// 2. Colored image of same size
   /// 3. Mobile image (Preferred with border and circular avatar)
   ///
-  static const String bwImage = 'images/photos/black-white.png';
-  static const String coloredImage = 'images/photos/colored.png';
-  static const String mobileImage = 'images/photos/mobile.png';
+  static const String bwImage =
+      'images/photos/imageedit_1_8910991149-modified.png';
+  static const String coloredImage =
+      'images/photos/IMG_20210717_131932_Bokeh-modified.png';
+  static const String mobileImage =
+      'images/photos/IMG_20210717_131932_Bokeh (2).jpg';
 
   /// Services Icons
   static const String app = 'images/services/app.png';

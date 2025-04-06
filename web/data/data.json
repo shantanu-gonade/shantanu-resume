@@ -1,157 +1,114 @@
 {
-    "basic": {
-        "firstName": "Muhammad",
-        "lastName": "Hamza",
-        "age": 22,
-        "email": "hamza.6.shakeel@gmail.com",
-        "phone": "+92 346 0159889",
-        "address": "Islamabad, PK",
-        "photos": [
-            "images/photos/bw.png",
-            "images/photos/colored.png",
-            "images/photos/mobile.png"
-        ],
-        "resume": "https://drive.google.com/drive/u/0/folders/1E6NxJlmnW2lTYTszcbODdpXiPFYe_kBM"
+  "basic": {
+    "firstName": "Shantanu",
+    "lastName": "Gonade",
+    "age": 26,
+    "email": "shantanu568@gmail.com",
+    "phone": "+1 227 205-8780",
+    "address": "College Park, MD",
+    "photos": [
+      "images/photos/imageedit_1_8910991149-modified.png",
+      "images/photos/IMG_20210717_131932_Bokeh-modified.png",
+      "images/photos/IMG_20210717_131932_Bokeh (2).jpg"
+    ],
+    "resume": "https://drive.google.com/file/d/1WSc64pmx8zey5qfYzqqCF_XbB77JE17l/view?usp=drive_link"
+  },
+  "socials": [
+    {
+      "icon": "fa-brands fa-linkedin",
+      "url": "https://www.linkedin.com/in/shantanu-gonade-1b0579162/"
     },
-    "socials": [
-        {
-            "icon": "fa-brands fa-square-facebook",
-            "url": "https://www.facebook.com/mhmzdev"
-        },
-        {
-            "icon": "fa-brands fa-linkedin",
-            "url": "https://www.linkedin.com/in/mhmzdev/"
-        },
-        {
-            "icon": "fa-brands fa-github",
-            "url": "https://github.com/mhmzdev"
-        },
-        {
-            "icon": "fa-brands fa-x-twitter",
-            "url": "https://twitter.com/mhmzdev"
-        },
-        {
-            "icon": "fa-brands fa-instagram",
-            "url": "https://www.instagram.com/mhmzdev/"
-        },
-        {
-            "icon": "fa-brands fa-medium",
-            "url": "https://mhmzdev.medium.com"
-        }
+    {
+      "icon": "fa-brands fa-github",
+      "url": "https://github.com/shantanu-gonade"
+    }
+  ],
+  "about": {
+    "heading": "I'm Shantanu Gonade, a Software Development Engineer with 3+ years of experience in Android application development.",
+    "description": "Highly motivated and results-oriented Software Development Engineer with 3+ years of experience in Android application development, specializing in Kotlin and architecting scalable, high-performance mobile solutions. Proven ability to lead projects, improve user engagement, and optimize application performance. Previously worked at Samsung R&D Noida, India, now doing my masters in M.Eng. Software Engineering Professional from University of Maryland College Park.",
+    "tech": [
+      "Kotlin",
+      "Java",
+      "Android",
+      "Flutter",
+      "React.js",
+      "Next.js",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "SQL"
     ],
-    "about": {
-        "heading": "I'm Muhammad Hamza, a Flutter Developer, Technical blog writer and UI/UX Designer.",
-        "description": "I'm a fresh graduate with Computer Science as Majors from COMSATS University Islamabad. I have been working with Flutter for the past 2 years and have developed multiple applications for both Android and iOS platforms. I have a keen interest in UI/UX designing and have been working on it for the past 3 years. I have also been writing technical blogs for the past 2 years and have been a part of multiple technical writing communities.",
-        "tech": [
-            "Flutter",
-            "Dart",
-            "Firebase",
-            "Python",
-            "dart_frog",
-            "jaspr",
-            "nodejs",
-            "express"
-        ],
-        "works": [
-            {
-                "image": "images/work/cui.png",
-                "url": "https://www.comsats.edu.pk/",
-                "height": 50
-            },
-            {
-                "image": "images/work/dsc.png",
-                "url": "https://developers.google.com/community/dsc",
-                "height": 30
-            },
-            {
-                "image": "images/work/flutterIsl.png",
-                "url": "https://meetup.com/flutter-islamabad",
-                "height": 60
-            },
-            {
-                "image": "images/work/st.png",
-                "url": "https://www.sastaticket.pk/",
-                "height": 60
-            }
-        ]
-    },
-    "services": [
-        {
-            "icon": "images/services/app.png",
-            "title": "Mobile Development"
-        },
-        {
-            "icon": "images/services/ui.png",
-            "title": "UI/UX Design"
-        },
-        {
-            "icon": "images/services/rapid.png",
-            "title": "Rapid Prototyping"
-        },
-        {
-            "icon": "images/services/blog.png",
-            "title": "Technical Writing"
-        },
-        {
-            "icon": "images/services/open.png",
-            "title": "Open Source - GitHub"
-        }
-    ],
-    "projects": [
-        {
-            "banner": "images/projects/snackbar.png",
-            "icon": "images/projects/flutter.png",
-            "title": "Awesome Snackbar",
-            "description": "A very unique dart package to uplift the snackbar experience in flutter. Available at pub.dev now!",
-            "link": "https://pub.dev/packages/awesome_snackbar"
-        },
-        {
-            "banner": "images/projects/quranB.png",
-            "icon": "images/projects/quran.png",
-            "title": "Quran App",
-            "description": "Application of Holy book of Muslims, Al-Qur'an. Developed using Flutter. Powered with live RestAPI given in README.md",
-            "link": "https://github.com/mhmzdev/the-holy-quran-app"
-        },
-        {
-            "banner": "images/projects/medkitB.png",
-            "icon": "images/projects/medkit.png",
-            "title": "MedKit",
-            "description": "A Phramacy app developed using Flutter powered with Firebase as database with Doctor and Patient panels.",
-            "link": "https://github.com/mhmzdev/MedKit-Pharmacy-App-Using-Flutter"
-        },
-        {
-            "banner": "images/projects/hereiamB.png",
-            "icon": "images/projects/hereiam.png",
-            "title": "Here I Am",
-            "description": "Here I am is an Alert app that Sends alert SMS holding your location (Address and Google Maps) to your loved ones.",
-            "link": "https://github.com/mhmzdev/Here-I-Am-Alert-App"
-        },
-        {
-            "banner": "images/projects/covidB.png",
-            "icon": "images/projects/covid.png",
-            "title": "Covid-19 Tracker",
-            "description": "A live trakcer for COVID19 stats across the Globe and my Home country Pakistan. It uses APIs so the data is live.",
-            "link": "https://github.com/mhmzdev/Covid19-Tracker-App"
-        }
-    ],
-    "contact": [
-        {
-            "icon": "fa-duotone fa-solid fa-house",
-            "title": "Location",
-            "description": "Islamabad, PK",
-            "action": "https://maps.app.goo.gl/ek2SSNh26K1i4HNF6"
-        },
-        {
-            "icon": "fa-duotone fa-solid fa-phone",
-            "title": "Phone",
-            "description": "+92 346 0159889",
-            "action": "https://wa.me/923460159889"
-        },
-        {
-            "icon": "fa-duotone fa-solid fa-envelope",
-            "title": "Email",
-            "description": "hamza.6.shakeel@gmail.com",
-            "action": "mailto:hamza.6.shakeel@gmail.com"
-        }
+    "works": [
+      {
+        "image": "images/work/st.png",
+        "url": "https://www.samsung.com/",
+        "height": 60
+      }
     ]
+  },
+  "services": [
+    {
+      "icon": "images/services/app.png",
+      "title": "Android Development"
+    },
+    {
+      "icon": "images/services/ui.png",
+      "title": "Mobile App Architecture"
+    },
+    {
+      "icon": "images/services/rapid.png",
+      "title": "Cloud Solutions (AWS)"
+    },
+    {
+      "icon": "images/services/open.png",
+      "title": "Web Development"
+    },
+    {
+      "icon": "images/services/blog.png",
+      "title": "DevOps & CI/CD"
+    }
+  ],
+  "projects": [
+    {
+      "banner": "images/projects/covidB.png",
+      "icon": "images/projects/covid.png",
+      "title": "Scalable E-Commerce Platform on AWS",
+      "description": "Architected and deployed a robust e-commerce system utilizing AWS services such as EC2, RDS, CloudFront, and WAF. Implemented Auto Scaling and Load Balancer for dynamic traffic handling.",
+      "link": "https://github.com/shantanu-gonade"
+    },
+    {
+      "banner": "images/projects/medkitB.png",
+      "icon": "images/projects/medkit.png",
+      "title": "Samsung Call Assistant",
+      "description": "Led the migration of Call Assistant and VoIP translator to Android 15 using MVI architecture. Reduced load time by 68%, increasing user engagement by 15%.",
+      "link": "https://github.com/shantanu-gonade"
+    },
+    {
+      "banner": "images/projects/hereiamB.png",
+      "icon": "images/projects/hereiam.png",
+      "title": "Samsung MX Chat",
+      "description": "Developed core chat features (Calls, Social, Groups), achieving single modular dependency and improving response time by 12% and refresh rate by 34%.",
+      "link": "https://github.com/shantanu-gonade"
+    }
+  ],
+  "contact": [
+    {
+      "icon": "fa-duotone fa-solid fa-house",
+      "title": "Location",
+      "description": "College Park, MD",
+      "action": "https://maps.app.goo.gl/8600BotelerLaneCollegeParkMD20740"
+    },
+    {
+      "icon": "fa-duotone fa-solid fa-phone",
+      "title": "Phone",
+      "description": "+1 227 205-8780",
+      "action": "tel:+12272058780"
+    },
+    {
+      "icon": "fa-duotone fa-solid fa-envelope",
+      "title": "Email",
+      "description": "shantanu568@gmail.com",
+      "action": "mailto:shantanu568@gmail.com"
+    }
+  ]
 }

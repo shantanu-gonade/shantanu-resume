@@ -31,8 +31,8 @@ class ServiceCard extends StatelessComponent {
         )
         .box(
           padding: EdgeInsets.all(15.px),
-          height: 200.px,
-          width: 250.px,
+          height: 25.vh,
+          width: 20.vw,
           radius: BorderRadius.circular(12.px),
           margin: EdgeInsets.only(top: 25.px, left: 15.px, right: 15.px),
         )
@@ -56,5 +56,30 @@ class ServiceCard extends StatelessComponent {
       ),
       transition: Transition('box-shadow', duration: 500),
     ),
+
+    /// MEDIA QUERY 1100px
+    css.media(MediaQuery.screen(maxWidth: 1100.px), [
+      css('.service-card').box(
+        height: 22.vh,
+        width: 25.vw,
+      ),
+    ]),
+
+    /// MEDIA QUERY 786px
+    css.media(MediaQuery.screen(maxWidth: 786.px), [
+      css('.service-card').box(
+        height: 20.vh,
+        width: 40.vw,
+      ),
+    ]),
+
+    /// MEDIA QUERY 480px (mobile)
+    css.media(MediaQuery.screen(maxWidth: 480.px), [
+      css('.service-card').box(
+        height: 18.vh,
+        width: 80.vw,
+      ),
+      css('.service-title').text(fontSize: 12.px),
+    ]),
   ];
 }

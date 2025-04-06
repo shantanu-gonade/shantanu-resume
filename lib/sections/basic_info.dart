@@ -32,7 +32,7 @@ class BasicInfoSection extends StatelessComponent {
         span(classes: 'subtitle', [
           i(classes: 'fa-solid fa-play play-icon', []),
           span(classes: 'dynamic-subtitles', [
-            text('Flutter Enthusiast'),
+            text('Software Development Engineer'),
           ])
         ]),
         div(classes: 'socials', [
@@ -59,7 +59,7 @@ class BasicInfoSection extends StatelessComponent {
         )
         .box(
             padding: EdgeInsets.only(
-          left: 10.vw,
+          left: 10.percent,
         )),
     css('.welcome').box(margin: EdgeInsets.only(bottom: 2.5.vh)).flexbox(
           alignItems: AlignItems.end,
@@ -85,9 +85,11 @@ class BasicInfoSection extends StatelessComponent {
       fontFamily: FontFamily('PoppinsBold'),
       fontWeight: FontWeight.bolder,
     ),
-    css('.main-image').box(height: 85.vh, width: 75.vh).background(
+    css('.main-image').box(height: 60.vh, width: 50.percent).background(
           image: ImageStyle.url(StaticAssets.bwImage),
-          size: BackgroundSize.cover,
+          size: BackgroundSize.contain,
+          position: BackgroundPosition.center,
+          repeat: BackgroundRepeat.noRepeat,
         ),
     css('.play-icon').text(color: themePrimaryColor),
     css('.subtitle')
@@ -125,19 +127,27 @@ class BasicInfoSection extends StatelessComponent {
       css('.first-name').text(fontSize: 50.px),
       css('.last-name').text(fontSize: 50.px),
       css('.dynamic-subtitles').text(fontSize: 14.px),
-      css('.main-image').box(height: 65.vh, width: 55.vh),
+      css('.main-image').box(height: 50.vh, width: 45.percent),
       css('.play-icon').box(height: 15.px),
     ]),
 
     /// MEDIA QUERY 786px
     css.media(MediaQuery.screen(maxWidth: 786.px), [
       css('.info-section').flexbox(direction: FlexDirection.column),
-      css('.main-image').box(height: 55.vh, width: 45.vh).flexItem(
-            alignSelf: AlignSelf.end,
+      css('.main-image').box(height: 40.vh, width: 80.percent).flexItem(
+            alignSelf: AlignSelf.center,
           ),
       css('.info').flexItem(
-        alignSelf: AlignSelf.start,
+        alignSelf: AlignSelf.center,
       ),
+    ]),
+
+    /// MEDIA QUERY 480px (mobile)
+    css.media(MediaQuery.screen(maxWidth: 480.px), [
+      css('.main-image').box(height: 35.vh, width: 90.percent),
+      css('.first-name').text(fontSize: 40.px),
+      css('.last-name').text(fontSize: 40.px),
+      css('.dynamic-subtitles').text(fontSize: 12.px),
     ]),
   ];
 }
