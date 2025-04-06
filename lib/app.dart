@@ -52,12 +52,13 @@ class AppState extends State<App> {
   // Must be a variable or getter of type [List<StyleRule>].
   @css
   static final styles = [
-    css('.main', [
-      css('p').text(color: Colors.white),
-      css('a').text(color: Colors.white),
-      css('h1').text(color: Colors.white),
-      css('h2').text(color: Colors.white),
-      css('span').text(color: Colors.white),
-    ]),
+    css('.main').box(
+      overflow: Overflow.hidden,
+    ),
+    css('.main p').text(color: Colors.white),
+    css('.main a').text(color: Colors.white),
+    css('.main h1').text(color: Colors.white),
+    css('.main h2').text(color: Colors.white),
+    css('.main span').text(color: Colors.white),
   ];
 }

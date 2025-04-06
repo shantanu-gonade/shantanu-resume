@@ -25,7 +25,16 @@ class AboutMeSection extends StatelessComponent {
         text('Get to know me :)'),
       ]),
       div(classes: 'about-section-body', [
-        div(classes: 'profile-picture', []),
+        div(classes: 'profile-picture', [
+          img(
+            src: StaticAssets.coloredImage,
+            classes: 'profile-image desktop-image',
+          ),
+          img(
+            src: StaticAssets.mobileImage,
+            classes: 'profile-image mobile-image',
+          ),
+        ]),
         div(classes: 'about-details', [
           span(
               classes: 'intro-label',
@@ -123,12 +132,12 @@ class AboutMeSection extends StatelessComponent {
     css('.about-me-section')
         .flexbox(
           direction: FlexDirection.column,
-          alignItems: AlignItems.center,
+          alignItems: AlignItems.start,
           justifyContent: JustifyContent.start,
         )
         .box(
-          // padding: EdgeInsets.only(top: 5.vh),
           width: 100.percent,
+          padding: EdgeInsets.only(top: 5.vh, bottom: 5.vh, left: 10.percent),
         ),
     css('.play-icon').text(color: themePrimaryColor),
     css('.title').text(
@@ -140,24 +149,24 @@ class AboutMeSection extends StatelessComponent {
         .flexbox(
           direction: FlexDirection.row,
           alignItems: AlignItems.center,
-          justifyContent: JustifyContent.center,
+          justifyContent: JustifyContent.start,
         )
         .box(
           margin: EdgeInsets.only(top: 50.px),
           width: 100.percent,
         ),
-    css('.profile-picture')
-        .background(
-          image: ImageStyle.url(
-            StaticAssets.coloredImage,
-          ),
-          size: BackgroundSize.cover,
-        )
-        .box(
-          height: 700.px,
-          width: 450.px,
-          margin: EdgeInsets.only(right: 100.px),
-        ),
+    css('.profile-picture').box(
+      margin: EdgeInsets.only(right: 30.px),
+    ),
+    css('.profile-image').box(
+      height: 400.px,
+      width: 400.px,
+      minWidth: 350.px,
+      maxWidth: 35.percent,
+    ),
+    css('.mobile-image').box(
+      display: Display.none,
+    ),
     css('.about-details')
         .flexbox(
           direction: FlexDirection.column,
@@ -165,7 +174,7 @@ class AboutMeSection extends StatelessComponent {
           justifyContent: JustifyContent.center,
         )
         .box(
-          width: 750.px,
+          width: 50.percent,
         ),
     css('.intro-label').text(fontSize: 18.px),
     css('.intro-heading')
@@ -174,7 +183,7 @@ class AboutMeSection extends StatelessComponent {
         )
         .text(fontSize: 20.px),
     css('.intro-details').text(
-      lineHeight: 3.vh,
+      lineHeight: 1.6.em,
       wordSpacing: 1.5.px,
       color: Colors.lightGrey,
     ),
@@ -182,7 +191,7 @@ class AboutMeSection extends StatelessComponent {
         .box(
           height: 1.px,
           width: 100.percent,
-          margin: EdgeInsets.symmetric(vertical: 2.vh),
+          margin: EdgeInsets.symmetric(vertical: 15.px),
         )
         .background(color: Colors.lightGrey),
     css('.tech-label').text(fontSize: 12.px),
@@ -217,46 +226,104 @@ class AboutMeSection extends StatelessComponent {
         ),
 
     /// MEDIA QUERIES
-    /// For smaller screens
+    /// For larger screens
+    css.media(MediaQuery.screen(minWidth: 1350.px), [
+      css('.about-me-section').box(
+        padding: EdgeInsets.only(top: 5.vh, bottom: 5.vh, left: 8.percent),
+      ),
+      css('.profile-image').box(
+        width: 450.px,
+        height: 450.px,
+        minWidth: 400.px,
+      ),
+    ]),
+
+    /// For medium screens
     css.media(MediaQuery.screen(maxWidth: 1350.px), [
-      css('.profile-picture').box(
-        maxHeight: 100.percent,
-        margin: EdgeInsets.symmetric(horizontal: 50.px),
+      css('.about-me-section').box(
+        padding: EdgeInsets.only(top: 5.vh, bottom: 5.vh, left: 6.percent),
       ),
-      css('.about-details').box(width: 45.vw),
-    ]),
-
-    css.media(MediaQuery.screen(maxWidth: 1100.px), [
       css('.profile-picture').box(
-        maxHeight: 80.percent,
+        margin: EdgeInsets.only(right: 25.px),
+      ),
+      css('.profile-image').box(
         width: 400.px,
-        margin: EdgeInsets.symmetric(horizontal: 30.px),
+        height: 400.px,
+        minWidth: 380.px,
       ),
-      css('.about-details').box(width: 45.vw),
+      css('.about-details').box(width: 45.percent),
     ]),
 
+    /// For smaller screens
+    css.media(MediaQuery.screen(maxWidth: 1100.px), [
+      css('.about-me-section').box(
+        padding: EdgeInsets.only(top: 5.vh, bottom: 5.vh, left: 4.percent),
+      ),
+      css('.profile-picture').box(
+        margin: EdgeInsets.only(right: 20.px),
+      ),
+      css('.profile-image').box(
+        width: 380.px,
+        height: 380.px,
+        minWidth: 350.px,
+      ),
+      css('.about-details').box(width: 45.percent),
+    ]),
+
+    /// For tablet screens
     css.media(MediaQuery.screen(maxWidth: 900.px), [
       css('.about-me-section').box(
-        padding: EdgeInsets.only(top: 3.vh, right: 0.vw),
+        padding: EdgeInsets.only(top: 5.vh, bottom: 5.vh, left: 3.percent),
       ),
       css('.about-section-body').flexbox(
         direction: FlexDirection.column,
-        alignItems: AlignItems.center,
+        alignItems: AlignItems.start,
         justifyContent: JustifyContent.start,
       ),
-      css('.profile-picture')
-          .background(
-            image: ImageStyle.url(
-              StaticAssets.mobileImage,
-            ),
-            size: BackgroundSize.cover,
-          )
-          .box(
-            width: 250.px,
-            height: 250.px,
-          ),
-      css('.about-details')
-          .box(width: 80.percent, margin: EdgeInsets.only(top: 40.px)),
+      css('.profile-picture').box(
+        margin: EdgeInsets.only(bottom: 40.px),
+      ),
+      css('.profile-image').box(
+        width: 350.px,
+        height: 350.px,
+        minWidth: 320.px,
+      ),
+      css('.about-details').box(
+        width: 90.percent,
+      ),
+    ]),
+
+    /// For mobile screens
+    css.media(MediaQuery.screen(maxWidth: 600.px), [
+      css('.about-me-section').box(
+        padding: EdgeInsets.only(top: 5.vh, bottom: 5.vh, left: 2.percent),
+      ),
+      css('.profile-image').box(
+        width: 300.px,
+        height: 300.px,
+        minWidth: 280.px,
+      ),
+      css('.desktop-image').box(
+        display: Display.none,
+      ),
+      css('.mobile-image').box(
+        display: Display.block,
+      ),
+      css('.about-details').box(
+        width: 95.percent,
+      ),
+      css('.title').text(fontSize: 32.px),
+      css('.intro-heading').text(fontSize: 18.px),
+      css('.intro-details').text(fontSize: 14.px),
+    ]),
+
+    /// For very small screens
+    css.media(MediaQuery.screen(maxWidth: 400.px), [
+      css('.profile-image').box(
+        width: 250.px,
+        height: 250.px,
+        minWidth: 230.px,
+      ),
     ]),
   ];
 }

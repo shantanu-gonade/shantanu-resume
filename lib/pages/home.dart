@@ -53,7 +53,7 @@ class Home extends AsyncStatelessComponent {
   static final List<StyleRule> styles = [
     css('.home-body')
         .box(
-          width: 100.vw,
+          overflow: Overflow.hidden,
         )
         .background(
           color: Colors.black,
