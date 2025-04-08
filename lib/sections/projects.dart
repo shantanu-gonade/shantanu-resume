@@ -32,7 +32,7 @@ class ProjectsSections extends StatelessComponent {
       div(styles: Styles.box(height: 45.px), []),
       AppButton(
         label: 'See more',
-        href: 'https://github.com/mhmzdev',
+        href: 'https://github.com/shantanu-gonade',
       ),
     ]);
   }
